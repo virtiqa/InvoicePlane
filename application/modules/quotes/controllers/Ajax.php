@@ -112,7 +112,7 @@ class Ajax extends Admin_Controller
 
             foreach ($values as $key => $value) {
                 preg_match("/^custom\[(.*?)\](?:\[\]|)$/", $key, $matches);
-                if ($matches) {
+                if ($matches && $value != null) {
                     $db_array[$matches[1]] = $value;
                 }
             }
